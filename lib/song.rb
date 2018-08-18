@@ -50,10 +50,13 @@ class Song
     clean_song = filename.split(".mp3").first
     song = new_by_name(clean_song.split(" - ").last)
     song.artist_name = clean_song.split(" - ").first
+    song
   end  
   
   def self.create_from_filename(filename)
-    filename.split(".mp3").first
+    clean_song = filename.split(".mp3").first
+    song = create_by_name(clean_song.split(" - ").last)
+    song.artist_name = clean_song.split(" - ").first
   end  
   
   def self.destroy_all

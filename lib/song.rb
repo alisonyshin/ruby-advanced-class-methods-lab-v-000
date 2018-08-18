@@ -61,6 +61,9 @@ class Song
     clean_song = filename.split(".mp3").first
     song = create_by_name(clean_song.split(" - ").last)
     song.artist_name = clean_song.split(" - ").first
+    #parts = filename.split(" - ")
+    #artist_name = parts[0]
+    #song_name = parts[1].gsub(".mp3", "")
   end  
   
   def self.destroy_all
